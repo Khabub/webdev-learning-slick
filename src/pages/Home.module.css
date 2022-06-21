@@ -1,0 +1,31 @@
+.container {
+  text-align: center;
+  font-size: 3rem; 
+}
+
+.bestway {
+  color: #fff;  
+  margin: 2rem 0 0 0;
+}
+
+.trackyour {
+  color: rgb(157, 157, 196);
+  padding: 0;
+  margin: 0;
+}
+
+.homeparagraf {
+  color: #fff;
+  font-size: 1.5rem;
+  padding: 0 15rem;
+}
+
+.btn-trythisapp {
+  background-color: blue;
+  border-radius: 15px;
+  border-style: none;
+  color: #fff;
+  font-size: 2rem;
+  padding: 1rem 3rem;
+  margin-top: 1rem;
+}

@@ -1,0 +1,8 @@
+.container {
+  color: #fff;
+  background-color: rgb(26, 2, 2);
+  padding: 3rem; 
+
+  display: flex;
+  justify-content: center;
+}

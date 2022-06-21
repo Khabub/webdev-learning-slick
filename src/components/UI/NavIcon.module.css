@@ -1,0 +1,40 @@
+.container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  color: #fff;
+  margin-left: 2rem;
+}
+
+.iconBox {
+  width: 50px;
+  height: 50px;
+  position: relative;
+  margin-right: 2rem;
+}
+
+.icon1 {
+  position: absolute;
+  top: 15px;
+  right: 10px;
+}
+
+.icon2 {
+  position: absolute;
+  top: 25px;
+  right: 10px;
+}
+
+.icon3 {
+  position: absolute;
+  top: 35px;
+  right: 10px;
+}
+
+.iconBox:hover {
+  cursor: pointer;
+  user-select: none;
+}
