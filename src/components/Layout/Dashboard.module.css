@@ -1,8 +1,21 @@
 .container {
   color: #fff;
   background-color: rgb(26, 2, 2);
-  padding: 3rem; 
+  padding: 3rem;
 
   display: flex;
+  flex-direction: row;
   justify-content: center;
+  width: 100vw;
+}
+
+
+
+.dashboard {
+
+}
+
+.dashLeft {
+  display: flex;
+  flex-direction: column;
 }

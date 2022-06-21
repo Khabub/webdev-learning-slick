@@ -1,31 +1,38 @@
 .container {
   text-align: center;
-  font-size: 3rem; 
 }
 
 .bestway {
-  color: #fff;  
+  color: #fff;
   margin: 2rem 0 0 0;
+  font-size: 2rem;
 }
 
 .trackyour {
-  color: rgb(157, 157, 196);
+  background: -webkit-linear-gradient(
+    180deg,
+    #9a9ac0 0%,
+    #4e63dd 100%
+  );
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
   padding: 0;
   margin: 0;
+  font-size: 2rem;
 }
 
 .homeparagraf {
-  color: #fff;
-  font-size: 1.5rem;
-  padding: 0 15rem;
+  color: #a3a3a3;
+  font-size: 0.8rem;
+  padding: 1rem 2rem;
 }
 
 .btn-trythisapp {
-  background-color: blue;
+  background-color: #0000ff;
   border-radius: 15px;
   border-style: none;
   color: #fff;
-  font-size: 2rem;
-  padding: 1rem 3rem;
+  font-size: 1rem;
+  padding: 0.8rem 2.2rem;
   margin-top: 1rem;
 }

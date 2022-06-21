@@ -4,7 +4,6 @@ import { NavLink } from "react-router-dom";
 import classes from "./MenuHam.module.css";
 
 const MenuHam = (props) => {
-
   const isActiveClass = ({ isActive }) =>
     isActive ? `${classes.active}` : undefined;
 
@@ -31,8 +30,7 @@ const MenuHam = (props) => {
             Contact
           </NavLink>
         </li>
-      </ul>     
-      
+      </ul>
     </Modal>
   );
 };

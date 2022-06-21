@@ -1,6 +1,6 @@
 import React, { useCallback, useEffect, useState } from "react";
 
-import NavIcon from "../UI/NavIcon";
+import NavMobil from "../UI/NavMobil";
 import MenuStandard from "./MenuStandard";
 
 const Navigation = (props) => {
@@ -30,7 +30,7 @@ const Navigation = (props) => {
         {icon === "noshow" ? (
           ""
         ) : icon ? (
-          <NavIcon onShow={props.onShow} />
+          <NavMobil onShow={props.onShow} />
         ) : (
           <MenuStandard />
         )}

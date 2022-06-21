@@ -15,7 +15,7 @@
   width: 160px;
   height: auto;
   top: 65px;
-  right: 10px;
+  right: 150px;
   background-color: rgba(39, 9, 9, 0.8);
   border-radius: 10px;
   animation: slideMenu 0.5s ease-out;
@@ -24,11 +24,11 @@
 @keyframes slideMenu {
   from {
     opacity: 0;
-    transform: translateX(100px);
+    
   }
 
   to {
     opacity: 1;
-    transform: translateX(0px);
+    
   }
 }

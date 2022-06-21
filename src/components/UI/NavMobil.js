@@ -1,7 +1,7 @@
 import React from "react";
 import Icon1 from "../../assets/Vectorham1.png";
 import Icon2 from "../../assets/Vectorham2.png";
-import classes from "./NavIcon.module.css";
+import classes from "./NavMobil.module.css";
 
 const NavIcon = (props) => {
   return (

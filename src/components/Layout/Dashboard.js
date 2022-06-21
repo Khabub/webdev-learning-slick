@@ -9,6 +9,7 @@ import {
   YAxis,
   Tooltip,
   Legend,
+  ResponsiveContainer
 } from "recharts";
 
 const data = [
@@ -52,9 +53,17 @@ const data = [
 const Dashboard = () => {
   return (
     <div className={classes.container}>
-      <AreaChart
-        width={600}
-        height={300}
+      <div className={classes.dashLeft}>
+        <h2>PRO acount</h2>
+        <ul>
+          <li>Home Screen</li>
+          <li>Dashboard</li>
+          <li>Settings</li>
+        </ul>
+      </div>
+      <div className={classes.dashboard}>
+        <ResponsiveContainer width={600} height="50%">
+      <AreaChart        
         data={data}
         margin={{ top: 10, left: 10, bottom: 10, right: 10 }}
       >
@@ -92,6 +101,8 @@ const Dashboard = () => {
         <Legend layout="horizontal" align="right" wrapperStyle={{ top: 300 }}
         iconType="square" />
       </AreaChart>
+      </ResponsiveContainer>
+      </div>
     </div>
   );
 };
