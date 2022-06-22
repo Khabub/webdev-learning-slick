@@ -56,7 +56,7 @@ const DashboardPage = () => {
       <div className={classes.dashboard}>
         <AreaChart
           width={180}
-          height={70}
+          height={95}
           data={data}
           margin={{ top: 10, left: 10, bottom: 10, right: 10 }}
         >
