@@ -2,8 +2,8 @@ import "./App.css";
 import { Fragment, useEffect, useState } from "react";
 import Navigation from "./components/Layout/Navigation";
 import Pages from "./components/Layout/Pages";
-import Dashboard from "./components/Layout/Dashboard";
 import MenuHam from "./components/Layout/MenuHam";
+import PagesDashboard from "./components/Layout/Pages_Dashboard";
 
 
 function App() {
@@ -31,8 +31,8 @@ function App() {
     <Fragment>
       {toggleMenu && <MenuHam onClose={closeMenu} />}
       <Navigation onShow={hamMenu}/>
-      <Pages />
-      <Dashboard />
+      <Pages />      
+      <PagesDashboard />
     </Fragment>
   );
 }
