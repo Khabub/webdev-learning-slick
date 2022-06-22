@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useCallback, useEffect, useState }  from "react";
 import classes from "./Dashboard_page.module.css";
 
 import {
@@ -14,7 +14,7 @@ import {
 const data = [
   {
     name: "Mo",
-    quests: 40,
+    quests: 43,
     questsOther: 17,
   },
   {
@@ -44,19 +44,41 @@ const data = [
   },
   {
     name: "Sun",
-    quests: 42,
+    quests: 44,
     questsOther: 35,
   },
 ];
 
 const DashboardPage = () => {
+  const [graphWidth, setGraphWidth] = useState("nothing");
+
+  const handleWindowSize = useCallback(() => {
+    window.innerWidth > 345 ? setGraphWidth(250) : setGraphWidth(210);
+  }, []);
+
+  useEffect(() => {
+    if (window.innerWidth > 345) {
+      setGraphWidth(250);
+    } else {
+      setGraphWidth(210);
+    }
+
+    window.addEventListener("resize", handleWindowSize);
+
+    return () => {
+      window.removeEventListener("resize", handleWindowSize);
+    };
+  }, [handleWindowSize]);
+
+
   return (
     <div>
-      <h4 className={classes.dashName}>Dashboard</h4>
+      
       <div className={classes.dashboard}>
+      <h4 className={classes.dashName}>Dashboard</h4>
         <AreaChart
-          width={180}
-          height={95}
+          width={graphWidth}
+          height={90}
           data={data}
           margin={{ top: 10, left: 10, bottom: 10, right: 10 }}
         >
@@ -85,7 +107,7 @@ const DashboardPage = () => {
           <Legend
             layout="horizontal"
             align="right"
-            wrapperStyle={{ top: 60, fontSize: 6 }}
+            wrapperStyle={{ top: 80, fontSize: 6 }}
             iconType="square"
             iconSize={8}
           />
