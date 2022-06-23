@@ -1,4 +1,4 @@
-import React, { useCallback, useEffect, useState }  from "react";
+import React, { useCallback, useEffect, useState } from "react";
 import classes from "./Dashboard_page.module.css";
 
 import {
@@ -12,7 +12,7 @@ import {
 } from "recharts";
 
 const data = [
-  {    
+  {
     name: "Mo",
     quests: 43,
     questsOther: 17,
@@ -70,15 +70,18 @@ const DashboardPage = () => {
     };
   }, [handleWindowSize]);
 
-
   return (
     <div>
-      
       <div className={classes.dashboard}>
-      <h4 className={classes.dashName}>Dashboard</h4>
-      <h4 className={classes.graphName}>Quest Charts</h4>
-      <h4 className={classes.typeCharName}>Crusader</h4>
-      <p className={classes.descGraph}>* Lorem ipsum lorem ipsu Lorem</p>
+        <h4 className={classes.dashName}>Dashboard</h4>
+        <h4 className={classes.graphName}>Quest Charts</h4>
+        <h4 className={classes.typeCharName}>Crusader</h4>
+        <p className={classes.descGraph}>* Lorem ipsum lorem ipsu Lorem</p>
+        <div className={classes.dashButtons}>
+          <button className={classes.monthlyBtn}>monthly</button>
+          <button className={classes.weeklyBtn}>weekly</button>
+          <button className={classes.dailyActive}>daily</button>
+        </div>
         <AreaChart
           width={graphWidth}
           height={130}

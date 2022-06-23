@@ -31,10 +31,10 @@
 .avatarBox {      
   display: flex;
   flex-direction: column;
-  justify-content: flex-start;
-  align-items: center;
+  justify-content: flex-start;  
   color: white;
   font-size: 0.8rem;
+  padding-left: 0.5rem;
 }
 
 .avatarBg {
@@ -51,12 +51,14 @@
 .avatarName {
   font-size: 0.5rem;
   transform: translateY(-1.2rem);
+  padding-left: 0.9rem;
 }
 
 .avatarStatus {
   transform: translateY(-2rem);
   font-size: 0.4rem;
   color: grey;
+  padding-left: 0.5rem;
 }
 
 .dashList {
