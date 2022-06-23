@@ -12,7 +12,7 @@ import {
 } from "recharts";
 
 const data = [
-  {
+  {    
     name: "Mo",
     quests: 43,
     questsOther: 17,
@@ -76,9 +76,12 @@ const DashboardPage = () => {
       
       <div className={classes.dashboard}>
       <h4 className={classes.dashName}>Dashboard</h4>
+      <h4 className={classes.graphName}>Quest Charts</h4>
+      <h4 className={classes.typeCharName}>Crusader</h4>
+      <p className={classes.descGraph}>* Lorem ipsum lorem ipsu Lorem</p>
         <AreaChart
           width={graphWidth}
-          height={90}
+          height={130}
           data={data}
           margin={{ top: 10, left: 10, bottom: 10, right: 10 }}
         >
@@ -101,13 +104,14 @@ const DashboardPage = () => {
             name="Guild quests"
           />
           <CartesianGrid stroke="#888" vertical={false} />
-          <XAxis hide={true} />
+          <XAxis dataKey="#" hide={true} />
+          {/* # - aby se nic neukazalo v tooltipu */}
           <YAxis hide={true} />
           <Tooltip offset={20} stroke="#000" wrapperStyle={{ fontSize: 6 }} />
           <Legend
             layout="horizontal"
             align="right"
-            wrapperStyle={{ top: 80, fontSize: 6 }}
+            wrapperStyle={{ top: 118, fontSize: 6 }}
             iconType="square"
             iconSize={8}
           />

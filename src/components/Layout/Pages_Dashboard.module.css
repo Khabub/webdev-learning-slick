@@ -4,7 +4,7 @@
   width: 98vw;
   padding: 0;
   margin: 1rem auto;
-  height: 125px;    
+  height: 165px;    
 }
 
 .dashLeft {
@@ -13,9 +13,8 @@
   border-top-left-radius: 5px;
   border-bottom-left-radius: 5px;
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: space-between;
+  flex-direction: column; 
+  justify-content: space-between;  
 }
 
 .dashRight {
@@ -65,21 +64,29 @@
   color: white;
   padding: 0; 
   margin : 0;
-  font-size: 0.5rem; 
+  font-size: 0.7rem; 
   display: flex;
   flex-direction: column; 
-  line-height: 0.8rem;
+  line-height: 1.2rem;
   transform: translateY(-1.7rem);
   color: grey;  
 }
 
+.dashList a {
+  text-decoration: none;
+  color: rgb(148, 148, 148);  
+}
 
+.dashList li {
+  margin-left: 1rem;
+}
 
-li:active,
-li:hover {
+.dashList a:hover,
+.dashList a.active,
+.dashList a:active {
   border-left: 2px solid rgb(140, 140, 209);  
-  transform: translateX(0.5rem);
-  color: white;
+  /* transform: translateX(2rem); */
+  color: rgb(255, 255, 255);
   cursor: pointer;  
   padding: 0 0.3rem;
 }
