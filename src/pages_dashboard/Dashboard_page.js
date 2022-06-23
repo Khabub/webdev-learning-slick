@@ -80,16 +80,7 @@ const DashboardPage = () => {
 
   return (
     <div>
-      <div className={classes.dashboard}>
-        <h4 className={classes.dashName}>Dashboard</h4>
-        <h4 className={classes.graphName}>Quest Charts</h4>
-        <h4 className={classes.typeCharName}>Crusader</h4>
-        <p className={classes.descGraph}>* Lorem ipsum lorem ipsu Lorem</p>
-        <div className={classes.dashButtons}>
-          <button className={classes.monthlyBtn}>monthly</button>
-          <button className={classes.weeklyBtn}>weekly</button>
-          <button className={classes.dailyActive}>daily</button>
-        </div>
+      <div className={classes.dashboard}>       
         <AreaChart
           width={graphWidth}
           height={130}
@@ -127,6 +118,15 @@ const DashboardPage = () => {
             iconSize={8}
           />
         </AreaChart>
+        <h4 className={classes.dashName}>Dashboard</h4>
+        <h4 className={classes.graphName}>Quest Charts</h4>
+        <h4 className={classes.typeCharName}>Crusader</h4>
+        <p className={classes.descGraph}>* Lorem ipsum lorem ipsu Lorem</p>
+        <div className={classes.dashButtons}>
+          <button className={classes.monthlyBtn}>monthly</button>
+          <button className={classes.weeklyBtn}>weekly</button>
+          <button className={classes.dailyActive}>daily</button>
+        </div>
       </div>
     </div>
   );

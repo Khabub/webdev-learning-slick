@@ -11,7 +11,7 @@ const MenuHam = (props) => {
     <Modal onClose={props.onClose}>
       <ul className={classes.menuHamList}>
         <li>
-          <NavLink to="home" className={isActiveClass}>
+          <NavLink to="products" className={isActiveClass}>
             Products
           </NavLink>
         </li>
@@ -21,7 +21,7 @@ const MenuHam = (props) => {
           </NavLink>
         </li>
         <li>
-          <NavLink to="gallery" className={isActiveClass}>
+          <NavLink to="resources" className={isActiveClass}>
             Resources
           </NavLink>
         </li>

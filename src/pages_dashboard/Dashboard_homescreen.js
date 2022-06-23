@@ -5,7 +5,7 @@ const DashboardHomescreen = () => {
 
   return (
     <div className={classes.container}>
-      <h1>Dashboard Home Screen</h1>
+      <h1>Home Screen</h1>
     </div>
   );
 };

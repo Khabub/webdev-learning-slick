@@ -1,6 +1,6 @@
-import classes from "./Home.module.css";
+import classes from "./Products.module.css";
 
-const Home = () => {
+const Products = () => {
   return (
     <div className={classes.container}>
       <h1 className={classes.bestway}>The Best Way to</h1>
@@ -14,4 +14,4 @@ const Home = () => {
   );
 };
 
-export default Home;
+export default Products;

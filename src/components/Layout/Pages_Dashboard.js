@@ -3,7 +3,7 @@ import { NavLink } from "react-router-dom";
 import DashboardPage from "../../pages_dashboard/Dashboard_page";
 import avatar from "../../assets/avatar.png";
 import classes from "./Pages_Dashboard.module.css";
-import { Route, Routes, Navigate } from "react-router-dom";
+import { Route, Routes } from "react-router-dom";
 import DashboardHomescreen from "../../pages_dashboard/Dashboard_homescreen";
 import DashboardSettings from "../../pages_dashboard/Dashboard_settings";
 
@@ -42,8 +42,7 @@ const PagesDashboard = () => {
       </div>
 
       <div className={classes.dashRight}>
-        <Routes>
-          <Route path="/" element={<Navigate to="homescreen" />} />
+        <Routes>          
           <Route path="homescreen" element={<DashboardHomescreen />} />
           <Route path="dashboard" element={<DashboardPage />} />
           <Route path="settings" element={<DashboardSettings />} />       

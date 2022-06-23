@@ -10,25 +10,37 @@
 }
 
 .container {
-  position: fixed;
+  position: absolute;
   z-index: 10;
   width: 160px;
   height: auto;
   top: 65px;
-  right: 150px;
-  background-color: rgba(39, 9, 9, 0.8);
+  left: 0;
+  background-color: rgba(134, 117, 117, 1.0);
   border-radius: 10px;
-  animation: slideMenu 0.5s ease-out;
+  animation: slideMenu 1s ease-out;
 }
 
 @keyframes slideMenu {
-  from {
+  0% {
+    transform: translateX(-100%);
     opacity: 0;
-    
   }
 
-  to {
+  60% {
+    transform: translateX(20px);
     opacity: 1;
-    
   }
+
+  80% {
+    transform: translateX(0);
+  }
+
+  90% {
+    transform: translateX(5%);
+  }
+  100% {
+    transform: translateX(0);
+  }
+  
 }
