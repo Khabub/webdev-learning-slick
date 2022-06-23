@@ -34,7 +34,7 @@
   justify-content: flex-start;  
   color: white;
   font-size: 0.8rem;
-  padding-left: 0.5rem;
+  margin: 0 auto;
 }
 
 .avatarBg {

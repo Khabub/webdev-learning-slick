@@ -53,11 +53,19 @@ const DashboardPage = () => {
   const [graphWidth, setGraphWidth] = useState("nothing");
 
   const handleWindowSize = useCallback(() => {
-    window.innerWidth > 345 ? setGraphWidth(250) : setGraphWidth(210);
+    if (window.innerWidth > 395) {
+      setGraphWidth(290);
+    } else if (window.innerWidth > 345) {
+      setGraphWidth(250);
+    } else {
+      setGraphWidth(210);
+    }
   }, []);
 
   useEffect(() => {
-    if (window.innerWidth > 345) {
+    if (window.innerWidth > 395) {
+      setGraphWidth(290);
+    } else if (window.innerWidth > 345) {
       setGraphWidth(250);
     } else {
       setGraphWidth(210);
