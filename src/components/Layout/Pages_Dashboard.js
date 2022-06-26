@@ -1,15 +1,45 @@
-import React from "react";
-import { NavLink } from "react-router-dom";
+import React, { useState } from "react";
 import DashboardPage from "../../pages_dashboard/Dashboard_page";
 import avatar from "../../assets/avatar.png";
 import classes from "./Pages_Dashboard.module.css";
-import { Route, Routes } from "react-router-dom";
 import DashboardHomescreen from "../../pages_dashboard/Dashboard_homescreen";
 import DashboardSettings from "../../pages_dashboard/Dashboard_settings";
 
+const pageInitial = {
+  home: true,
+  dashboard: false,
+  settings: false,
+};
+
 const PagesDashboard = () => {
-  const isActiveClass = ({ isActive }) =>
-    isActive ? `${classes.active}` : undefined;
+  const [page, setPage] = useState(pageInitial);
+
+  const homeHandler = () => {
+    setPage({ home: true, dashboard: false, settings: false });
+  };
+
+  const dashboardHandler = () => {
+    setPage({ home: false, dashboard: true, settings: false });
+  };
+  const settingsHandler = () => {
+    setPage({ home: false, dashboard: false, settings: true });
+  };
+
+  let showPage;
+  let activeLinkDash, activeLinkHome, activeLinkSet;
+
+  if (page.home) {
+    showPage = <DashboardHomescreen />;
+    activeLinkHome = `${classes.active}`;
+  }
+  if (page.dashboard) {
+    showPage = <DashboardPage />;
+    activeLinkDash = `${classes.active}`;
+  }
+  if (page.settings) {
+    showPage = <DashboardSettings />;
+    activeLinkSet = `${classes.active}`;
+  }
 
   return (
     <div className={classes.container}>
@@ -24,30 +54,24 @@ const PagesDashboard = () => {
 
         <ul className={classes.dashList}>
           <li>
-            <NavLink to="homescreen" className={isActiveClass}>
+            <button className={activeLinkHome} onClick={homeHandler}>
               Home
-            </NavLink>
+            </button>
           </li>
           <li>
-            <NavLink to="dashboard" className={isActiveClass}>
+            <button className={activeLinkDash} onClick={dashboardHandler}>
               Dashboard
-            </NavLink>
+            </button>
           </li>
           <li>
-            <NavLink to="settings" className={isActiveClass}>
+            <button className={activeLinkSet} onClick={settingsHandler}>
               Settings
-            </NavLink>
+            </button>
           </li>
         </ul>
       </div>
 
-      <div className={classes.dashRight}>
-        <Routes>          
-          <Route path="homescreen" element={<DashboardHomescreen />} />
-          <Route path="dashboard" element={<DashboardPage />} />
-          <Route path="settings" element={<DashboardSettings />} />       
-        </Routes>
-      </div>
+      <div className={classes.dashRight}>{showPage}</div>
     </div>
   );
 };
