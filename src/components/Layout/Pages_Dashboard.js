@@ -4,42 +4,51 @@ import avatar from "../../assets/avatar.png";
 import classes from "./Pages_Dashboard.module.css";
 import DashboardHomescreen from "../../pages_dashboard/Dashboard_homescreen";
 import DashboardSettings from "../../pages_dashboard/Dashboard_settings";
+import Button from "../UI/Button";
 
-const pageInitial = {
-  home: true,
-  dashboard: false,
-  settings: false,
-};
+const links = [
+  {
+    id: 0,
+    name: "Home",
+    pageName: <DashboardHomescreen />,
+    setActive: true,
+  },
+  {
+    id: 1,
+    name: "Dashboard",
+    pageName: <DashboardPage />,
+    setActive: false,
+  },
+  {
+    id: 2,
+    name: "Settings",
+    pageName: <DashboardSettings />,
+    setActive: false,
+  },
+];
 
 const PagesDashboard = () => {
-  const [page, setPage] = useState(pageInitial);
+  const [page, setPage] = useState(links[0].pageName);
 
-  const homeHandler = () => {
-    setPage({ home: true, dashboard: false, settings: false });
+  const pageHandler = (val) => {
+    links.map((prev) => (prev.setActive = false));
+
+    val.setActive = true;
+    setPage(val.pageName);
   };
 
-  const dashboardHandler = () => {
-    setPage({ home: false, dashboard: true, settings: false });
-  };
-  const settingsHandler = () => {
-    setPage({ home: false, dashboard: false, settings: true });
-  };
-
-  let showPage;
-  let activeLinkDash, activeLinkHome, activeLinkSet;
-
-  if (page.home) {
-    showPage = <DashboardHomescreen />;
-    activeLinkHome = `${classes.active}`;
-  }
-  if (page.dashboard) {
-    showPage = <DashboardPage />;
-    activeLinkDash = `${classes.active}`;
-  }
-  if (page.settings) {
-    showPage = <DashboardSettings />;
-    activeLinkSet = `${classes.active}`;
-  }
+  const link = (
+    <ul className={classes.dashList}>
+      {links.map((val) => (
+        <Button
+          key={val.id}
+          name={val.name}
+          class={val.setActive}
+          pageHandle={pageHandler.bind(null, val)}
+        />
+      ))}
+    </ul>
+  );
 
   return (
     <div className={classes.container}>
@@ -51,27 +60,10 @@ const PagesDashboard = () => {
           <p className={classes.avatarName}>Kabub</p>
           <p className={classes.avatarStatus}>PRO Account</p>
         </div>
-
-        <ul className={classes.dashList}>
-          <li>
-            <button className={activeLinkHome} onClick={homeHandler}>
-              Home
-            </button>
-          </li>
-          <li>
-            <button className={activeLinkDash} onClick={dashboardHandler}>
-              Dashboard
-            </button>
-          </li>
-          <li>
-            <button className={activeLinkSet} onClick={settingsHandler}>
-              Settings
-            </button>
-          </li>
-        </ul>
+        {link}
       </div>
 
-      <div className={classes.dashRight}>{showPage}</div>
+      <div className={classes.dashRight}>{page}</div>
     </div>
   );
 };

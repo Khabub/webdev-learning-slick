@@ -5,9 +5,13 @@
   height: 5rem;  
 }
 
-.logo {
-  color: #fff;
+.logo {  
   margin-left: 2rem;
+}
+
+.logo a {
+  color: #fff;
+  text-decoration: none;
 }
 
 .links {

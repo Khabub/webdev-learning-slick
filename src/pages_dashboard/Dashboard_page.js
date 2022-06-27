@@ -1,5 +1,6 @@
 import React, { useCallback, useEffect, useState } from "react";
 import classes from "./Dashboard_page.module.css";
+import { dailyData, weeklyData, monthlyData } from "../store/data-list";
 
 import {
   AreaChart,
@@ -11,46 +12,9 @@ import {
   Legend,
 } from "recharts";
 
-const data = [
-  {
-    name: "Mo",
-    quests: 43,
-    questsOther: 17,
-  },
-  {
-    name: "Tue",
-    quests: 25,
-    questsOther: 22,
-  },
-  {
-    name: "Wen",
-    quests: 28,
-    questsOther: 23,
-  },
-  {
-    name: "Thu",
-    quests: 35,
-    questsOther: 20,
-  },
-  {
-    name: "Fri",
-    quests: 39,
-    questsOther: 28,
-  },
-  {
-    name: "Sat",
-    quests: 22,
-    questsOther: 37,
-  },
-  {
-    name: "Sun",
-    quests: 44,
-    questsOther: 35,
-  },
-];
-
 const DashboardPage = () => {
   const [graphWidth, setGraphWidth] = useState("nothing");
+  const [data, setData] = useState(dailyData);
 
   const handleWindowSize = useCallback(() => {
     if (window.innerWidth > 395) {
@@ -78,9 +42,19 @@ const DashboardPage = () => {
     };
   }, [handleWindowSize]);
 
+  const dailyDataHandler = () => {
+    setData(dailyData);
+  };
+  const weeklyDataHandler = () => {
+    setData(weeklyData);
+  };
+  const monthlyDataHandler = () => {
+    setData(monthlyData);
+  };
+
   return (
     <div>
-      <div className={classes.dashboard}>       
+      <div className={classes.dashboard}>
         <AreaChart
           width={graphWidth}
           height={130}
@@ -123,9 +97,15 @@ const DashboardPage = () => {
         <h4 className={classes.typeCharName}>Crusader</h4>
         <p className={classes.descGraph}>* Lorem ipsum lorem ipsu Lorem</p>
         <div className={classes.dashButtons}>
-          <button className={classes.monthlyBtn}>monthly</button>
-          <button className={classes.weeklyBtn}>weekly</button>
-          <button className={classes.dailyActive}>daily</button>
+          <button onClick={monthlyDataHandler} className={classes.monthlyBtn}>
+            monthly
+          </button>
+          <button onClick={weeklyDataHandler} className={classes.weeklyBtn}>
+            weekly
+          </button>
+          <button onClick={dailyDataHandler} className={classes.dailyActive}>
+            daily
+          </button>
         </div>
       </div>
     </div>

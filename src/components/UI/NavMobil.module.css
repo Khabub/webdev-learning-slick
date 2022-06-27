@@ -4,9 +4,13 @@
   align-items: center;
 }
 
-.logo {
-  color: #fff;
+.logo {  
   margin-left: 1rem;
+}
+
+.logo a {
+  color: #fff;
+  text-decoration: none;
 }
 
 .iconBox {

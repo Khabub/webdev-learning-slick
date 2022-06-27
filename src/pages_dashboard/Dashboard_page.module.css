@@ -4,7 +4,7 @@
   margin-bottom: 0.4rem;
   border-radius: 5px;  
   padding-top: 0.4rem; 
-  position: relative;     
+  position: relative;      
 }
 
 .dashName {
@@ -49,11 +49,18 @@
   font-size: 0.5rem;
   color: rgb(180, 180, 180);
   background-color: black;
-  border-width: 0;
+  border: none;
   font-weight: 700;
 }
 
-.dailyActive {
+.dashButtons button:hover {
+  background-color: rgb(51, 51, 179);
+  color: #fff;
+  cursor: pointer;
+  border: none;
+}
+
+.active {
   background-color: rgb(51, 51, 179);
   color: #fff;
 }

@@ -74,10 +74,7 @@
   color: grey;
 }
 
-.dashList a {
-  text-decoration: none;
-  color: rgb(148, 148, 148);
-}
+
 
 .dashList li {
   margin-left: 1rem;
@@ -92,9 +89,7 @@
   font-size: 0.6rem;
 }
 
-.dashList button:hover,
-.dashList button.active,
-.dashList button:active
+.dashList button:hover
  {
   border-left: 2px solid rgb(140, 140, 209);
   color: rgb(255, 255, 255);

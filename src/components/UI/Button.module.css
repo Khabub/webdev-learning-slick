@@ -1,0 +1,8 @@
+button.active,
+button:active
+ {
+  border-left: 2px solid rgb(140, 140, 209);
+  color: rgb(255, 255, 255);
+  cursor: pointer;
+  padding: 0 0.3rem;
+}
