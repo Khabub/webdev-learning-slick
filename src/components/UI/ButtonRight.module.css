@@ -1,0 +1,11 @@
+.btns button.active,
+.btns button:active
+ {  
+  color: rgb(255, 255, 255);
+  background-color: blue;
+  cursor: pointer;
+  padding: 0.1rem 0.2rem;
+  margin: 0;
+  border-radius: 5px;
+  border: none;
+}

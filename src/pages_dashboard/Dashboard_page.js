@@ -1,6 +1,7 @@
 import React, { useCallback, useEffect, useState } from "react";
 import classes from "./Dashboard_page.module.css";
 import { dailyData, weeklyData, monthlyData } from "../store/data-list";
+import ButtonRight from "../components/UI/ButtonRight";
 
 import {
   AreaChart,
@@ -12,9 +13,32 @@ import {
   Legend,
 } from "recharts";
 
+
+const linksDayWeekMonth = [
+  {
+    id: 0,
+    name: "daily",
+    data: dailyData,   
+    setActive: true,
+  },
+  {
+    id: 1,
+    name: "weekly",
+    data: weeklyData,   
+    setActive: false,
+  },
+  {
+    id: 2,
+    name: "monthly",
+    data: monthlyData,    
+    setActive: false,
+  },
+];
+
 const DashboardPage = () => {
   const [graphWidth, setGraphWidth] = useState("nothing");
-  const [data, setData] = useState(dailyData);
+  const [data, setData] = useState(linksDayWeekMonth[0].data);
+  
 
   const handleWindowSize = useCallback(() => {
     if (window.innerWidth > 395) {
@@ -42,15 +66,26 @@ const DashboardPage = () => {
     };
   }, [handleWindowSize]);
 
-  const dailyDataHandler = () => {
-    setData(dailyData);
+  
+  const linkHandler = (val) => {
+    linksDayWeekMonth.map((prev) => (prev.setActive = false));
+    val.setActive = true;
+    setData(val.data);
   };
-  const weeklyDataHandler = () => {
-    setData(weeklyData);
-  };
-  const monthlyDataHandler = () => {
-    setData(monthlyData);
-  };
+
+  const link = (
+    <ul className={classes.btnDayWeekMonth}>
+      {linksDayWeekMonth.map((val) => (
+        <ButtonRight
+          key={val.id}
+          name={val.name}
+          class={val.setActive}
+          pageHandle={linkHandler.bind(null, val)}
+        />
+      ))}
+    </ul>
+  );
+
 
   return (
     <div>
@@ -97,15 +132,7 @@ const DashboardPage = () => {
         <h4 className={classes.typeCharName}>Crusader</h4>
         <p className={classes.descGraph}>* Lorem ipsum lorem ipsu Lorem</p>
         <div className={classes.dashButtons}>
-          <button onClick={monthlyDataHandler} className={classes.monthlyBtn}>
-            monthly
-          </button>
-          <button onClick={weeklyDataHandler} className={classes.weeklyBtn}>
-            weekly
-          </button>
-          <button onClick={dailyDataHandler} className={classes.dailyActive}>
-            daily
-          </button>
+          {link}
         </div>
       </div>
     </div>

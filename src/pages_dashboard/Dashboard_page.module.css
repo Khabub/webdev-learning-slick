@@ -39,28 +39,35 @@
   color: rgb(180, 180, 180);
 }
 
-.dashButtons {
-  position: absolute;
-  right: 8px;
-  top: -22px;
+.btnDayWeekMonth {
+  display: flex;
+  flex-direction: row-reverse; 
+  justify-content: space-around;    
 }
 
-.monthlyBtn, .weeklyBtn, .dailyActive {
-  font-size: 0.5rem;
-  color: rgb(180, 180, 180);
-  background-color: black;
+.btnDayWeekMonth button {
+  background-color: transparent;
+  color: white;
+  padding: 0.1rem 0.2rem;
+  margin: 0;
+  border-radius: 5px;
   border: none;
-  font-weight: 700;
+  font-size: 0.5rem;
+}
+
+.dashButtons {
+  position: absolute;  
+  right: 2px;
+  top: -37px;
+  width: 130px;
 }
 
 .dashButtons button:hover {
   background-color: rgb(51, 51, 179);
   color: #fff;
   cursor: pointer;
+  border-radius: 5px;
   border: none;
-}
-
-.active {
-  background-color: rgb(51, 51, 179);
-  color: #fff;
+  padding: 0.1rem 0.2rem;
+  margin: 0;
 }
