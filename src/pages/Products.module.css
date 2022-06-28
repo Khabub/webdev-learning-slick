@@ -75,6 +75,31 @@
   }
 }
 
+@media (min-width: 700px) {
+  .bestway {
+    font-size: 2rem;
+  }
+  .trackyour {
+    font-size: 2rem;
+  }
+  .homeparagraf {
+    padding: 1rem 3rem;
+    font-size: 0.8rem;
+  }
+
+  .btn-trythisapp {
+    padding: 0.5rem 1.8rem;
+    margin-bottom: 0.5rem;
+    font-size: 1.5rem;
+  }
+
+  .btn-trythisapp:hover,
+  .btn-trythisapp:active {
+    padding: 0.5rem 1.8rem;
+    font-size: 1.5rem;
+  }
+}
+
 @media (min-width: 1000px) {
   .bestway {
     font-size: 2.7rem;
