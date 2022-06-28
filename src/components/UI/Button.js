@@ -2,7 +2,6 @@ import React from "react";
 import classes from "./Button.module.css";
 
 const Button = (props) => {
-
   const isActive = props.class ? `${classes.active}` : "";
   return (
     <li>

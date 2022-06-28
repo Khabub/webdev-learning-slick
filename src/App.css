@@ -1,11 +1,16 @@
 body {
   margin: 0;
   padding: 0;
-  width: 100vw; 
+  width: 100vw;
+  height: 100vh;
   overflow-x: hidden;
 
-  background: radial-gradient(circle, rgb(5, 5, 58) 0%, rgb(110, 108, 143) 100%);
-  animation: bg-gradient 5s ease infinite;
+  background: radial-gradient(
+    circle,
+    rgb(5, 5, 58) 0%,
+    rgb(110, 108, 143) 100%
+  );
+  animation: bg-gradient 15s ease infinite;
   background-size: 400% 400%;
 }
 

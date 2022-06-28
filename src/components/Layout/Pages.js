@@ -15,7 +15,6 @@ const Pages = () => {
         <Route path="about" element={<About />} />
         <Route path="resources" element={<Resource />} />
         <Route path="contact" element={<Contact />} />
-       
       </Routes>
     </div>
   );

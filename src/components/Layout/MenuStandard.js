@@ -16,16 +16,24 @@ const Navigation = () => {
 
       <ul className={classes.links}>
         <li>
-          <NavLink to="products" className={isActiveClass}>Products</NavLink>
+          <NavLink to="products" className={isActiveClass}>
+            Products
+          </NavLink>
         </li>
         <li>
-          <NavLink to="about" className={isActiveClass}>About</NavLink>
+          <NavLink to="about" className={isActiveClass}>
+            About
+          </NavLink>
         </li>
         <li>
-          <NavLink to="resources" className={isActiveClass}>Resources</NavLink>
+          <NavLink to="resources" className={isActiveClass}>
+            Resources
+          </NavLink>
         </li>
         <li>
-          <NavLink to="contact" className={isActiveClass}>Contact</NavLink>
+          <NavLink to="contact" className={isActiveClass}>
+            Contact
+          </NavLink>
         </li>
       </ul>
 

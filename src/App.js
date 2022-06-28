@@ -5,7 +5,6 @@ import Pages from "./components/Layout/Pages";
 import MenuHam from "./components/Layout/MenuHam";
 import PagesDashboard from "./components/Layout/Pages_Dashboard";
 
-
 function App() {
   useEffect(() => {
     const el = document.querySelector("body");
@@ -26,12 +25,11 @@ function App() {
     setToggleMenu(false);
   };
 
-
   return (
     <Fragment>
       {toggleMenu && <MenuHam onClose={closeMenu} />}
-      <Navigation onShow={hamMenu}/>
-      <Pages />      
+      <Navigation onShow={hamMenu} />
+      <Pages />
       <PagesDashboard />
     </Fragment>
   );

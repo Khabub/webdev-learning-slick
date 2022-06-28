@@ -16,7 +16,7 @@
   height: auto;
   top: 65px;
   left: 0;
-  background-color: rgba(134, 117, 117, 1.0);
+  background-color: rgba(134, 117, 117, 1);
   border-radius: 10px;
   animation: slideMenu 1s ease-out;
 }
@@ -42,5 +42,4 @@
   100% {
     transform: translateX(0);
   }
-  
 }

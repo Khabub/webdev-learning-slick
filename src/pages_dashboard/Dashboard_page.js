@@ -13,24 +13,23 @@ import {
   Legend,
 } from "recharts";
 
-
 const linksDayWeekMonth = [
   {
     id: 0,
     name: "daily",
-    data: dailyData,   
+    data: dailyData,
     setActive: true,
   },
   {
     id: 1,
     name: "weekly",
-    data: weeklyData,   
+    data: weeklyData,
     setActive: false,
   },
   {
     id: 2,
     name: "monthly",
-    data: monthlyData,    
+    data: monthlyData,
     setActive: false,
   },
 ];
@@ -38,15 +37,16 @@ const linksDayWeekMonth = [
 const DashboardPage = () => {
   const [graphWidth, setGraphWidth] = useState("nothing");
   const [data, setData] = useState(linksDayWeekMonth[0].data);
-  
 
   const handleWindowSize = useCallback(() => {
-    if (window.innerWidth >= 700) {
+    if (window.innerWidth >= 1000) {
+      setGraphWidth(750);
+    } else if (window.innerWidth >= 700) {
       setGraphWidth(550);
     } else if (window.innerWidth >= 600) {
-      setGraphWidth(470); 
+      setGraphWidth(470);
     } else if (window.innerWidth >= 500) {
-      setGraphWidth(390);         
+      setGraphWidth(390);
     } else if (window.innerWidth >= 395) {
       setGraphWidth(290);
     } else if (window.innerWidth >= 345) {
@@ -57,12 +57,14 @@ const DashboardPage = () => {
   }, []);
 
   useEffect(() => {
-    if (window.innerWidth >= 700) {
+    if (window.innerWidth >= 1000) {
+      setGraphWidth(750);
+    } else if (window.innerWidth >= 700) {
       setGraphWidth(550);
     } else if (window.innerWidth >= 600) {
-      setGraphWidth(470); 
+      setGraphWidth(470);
     } else if (window.innerWidth >= 500) {
-      setGraphWidth(390);      
+      setGraphWidth(390);
     } else if (window.innerWidth >= 395) {
       setGraphWidth(290);
     } else if (window.innerWidth >= 345) {
@@ -73,12 +75,14 @@ const DashboardPage = () => {
 
     window.addEventListener("resize", handleWindowSize);
 
+    linksDayWeekMonth.map((prev) => (prev.setActive = false));
+    linksDayWeekMonth[0].setActive = true;
+
     return () => {
       window.removeEventListener("resize", handleWindowSize);
     };
   }, [handleWindowSize]);
 
-  
   const linkHandler = (val) => {
     linksDayWeekMonth.map((prev) => (prev.setActive = false));
     val.setActive = true;
@@ -97,7 +101,6 @@ const DashboardPage = () => {
       ))}
     </ul>
   );
-
 
   return (
     <div>
@@ -143,9 +146,7 @@ const DashboardPage = () => {
         <h4 className={classes.graphName}>Quest Charts</h4>
         <h4 className={classes.typeCharName}>Crusader</h4>
         <p className={classes.descGraph}>* Lorem ipsum lorem ipsu Lorem</p>
-        <div className={classes.dashButtons}>
-          {link}
-        </div>
+        <div className={classes.dashButtons}>{link}</div>
       </div>
     </div>
   );

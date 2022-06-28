@@ -4,7 +4,6 @@
 
 .bestway {
   color: #fff;
-  
   font-size: 2rem;
 }
 
@@ -48,7 +47,6 @@
 @media (min-width: 700px) {
   .bestway {
     font-size: 1.7rem;
-    
   }
   .trackyour {
     font-size: 1.7rem;
@@ -62,7 +60,7 @@
   }
 
   .btn-trythisapp:hover,
-  .btn-trythisapp:active {        
+  .btn-trythisapp:active {
     padding: 0.5rem 1.5rem;
   }
 }

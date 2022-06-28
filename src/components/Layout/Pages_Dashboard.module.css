@@ -1,10 +1,10 @@
 .container {
   display: flex;
-  justify-content: space-around; 
+  justify-content: space-around;
   width: 98vw;
   padding: 0;
   margin: 1rem auto;
-  height: 165px;  
+  height: 165px;
 }
 
 .dashLeft {
@@ -74,8 +74,6 @@
   color: grey;
 }
 
-
-
 .dashList li {
   margin-left: 1rem;
 }
@@ -89,10 +87,16 @@
   font-size: 0.6rem;
 }
 
-.dashList button:hover
- {
+.dashList button:hover {
   border-left: 2px solid rgb(140, 140, 209);
   color: rgb(255, 255, 255);
   cursor: pointer;
   padding: 0 0.3rem;
+}
+
+@media (min-width: 1050px) {
+  .container {
+    height: 200px;
+    width: 70%;
+  }
 }

@@ -51,7 +51,6 @@ const PagesDashboard = () => {
   );
 
   return (
-    
     <div className={classes.container}>
       <div className={classes.dashLeft}>
         <div className={classes.avatarBox}>
@@ -66,7 +65,6 @@ const PagesDashboard = () => {
 
       <div className={classes.dashRight}>{page}</div>
     </div>
-    
   );
 };
 

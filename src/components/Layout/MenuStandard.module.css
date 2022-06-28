@@ -2,10 +2,10 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  height: 5rem;  
+  height: 5rem;
 }
 
-.logo {  
+.logo {
   margin-left: 1rem;
 }
 
@@ -17,16 +17,15 @@
 .links {
   display: flex;
   justify-content: space-evenly;
-  align-items: center;  
-  list-style-type: none;  
+  align-items: center;
+  list-style-type: none;
   width: 100%;
 }
 
 .links a {
   text-decoration: none;
   color: rgb(199, 199, 199);
-  padding: 0.1rem 0; 
-  
+  padding: 0.1rem 0;
 }
 
 .links a:hover,
@@ -38,7 +37,7 @@
 }
 
 .btn-dashboard {
-  margin-right: 1rem;  
+  margin-right: 1rem;
 }
 
 .btn-dashboard button {
@@ -47,4 +46,16 @@
   font-size: 1rem;
   padding: 0.3rem 1rem;
   border-radius: 15px;
+  border: 1px solid black;
+}
+
+.btn-dashboard button:hover,
+.btn-dashboard button:active {
+  background: #4e4b4b;
+  color: rgb(251, 255, 0);
+  font-size: 1rem;
+  padding: 0.3rem 1rem;
+  border-radius: 15px;
+  cursor: pointer;
+  border: 1px solid black;
 }
