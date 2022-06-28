@@ -3,8 +3,8 @@ import classes from "./Page.module.css";
 
 const Resource = () => {
   return (
-    <div>
-      <h1 className={classes.container}>Resource</h1>
+    <div className={classes.container}>
+      <h1>Resource</h1>
     </div>
   );
 };

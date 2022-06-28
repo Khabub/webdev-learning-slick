@@ -55,12 +55,47 @@
     padding: 0.5rem 2rem;
   }
   .btn-trythisapp {
+    background-color: #0000ff;
+    border-radius: 15px;
+    border: 0.2rem solid transparent;
+    color: #fff;
+    font-size: 1rem;
     padding: 0.5rem 1.5rem;
     margin-bottom: 0.5rem;
   }
 
   .btn-trythisapp:hover,
-  .btn-trythisapp:active {
+  .btn-trythisapp:active {    
+    background-color: #0000ff;    
+    border-style: none;
+    border: 0.2rem solid rgb(158, 193, 202);
+    color: rgb(245, 241, 14);
+    font-size: 1rem;
     padding: 0.5rem 1.5rem;
+  }
+}
+
+@media (min-width: 1000px) {
+  .bestway {
+    font-size: 2.7rem;
+  }
+  .trackyour {
+    font-size: 2.7rem;
+  }
+  .homeparagraf {
+    padding: 1rem 3rem;
+    font-size: 1.2rem;
+  }
+
+  .btn-trythisapp {
+    padding: 0.8rem 1.8rem;
+    margin-bottom: 0.5rem;
+    font-size: 1.9rem;
+  }
+
+  .btn-trythisapp:hover,
+  .btn-trythisapp:active {
+    padding: 0.8rem 1.8rem;
+    font-size: 1.9rem;
   }
 }

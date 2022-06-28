@@ -3,14 +3,4 @@
   height: 50vh; 
 }
 
-@media (min-width: 700px) {
-  .container {
-    height: auto;
-  }
-}
 
-@media (min-width: 1000px) {
-  .container {
-    height: 40vh;
-  }
-}

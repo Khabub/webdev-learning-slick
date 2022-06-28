@@ -98,5 +98,97 @@
   .container {
     height: 200px;
     width: 70%;
+  } 
+}
+
+@media (min-width: 1200px) {
+  .dashList button {
+    font-size: 1.2rem;
   }
+
+  .dashLeft {
+    width: 180px;
+    justify-content: center;
+  }
+
+  .dashList {
+    line-height: 2rem;
+  }
+
+  .avatarBox {
+    transform: translateX(25px);
+  }
+  .avatarBg {
+    width: 80px;
+    height: 80px;   
+    transform: scale(0.5);    
+  }
+  .avatarBg img {
+    transform: scale(1.8);
+  }
+  .avatarName {
+    font-size: 0.8rem;
+    transform: translateY(-1.7rem);
+    padding-left: 1.3rem;
+  }
+  
+  .avatarStatus {
+    transform: translateY(-3rem);
+    font-size: 0.7rem;
+    color: grey;
+    padding-left: 0.4rem;
+  }
+
+  .container {
+  display: flex;
+  justify-content: space-around;
+  width: 98vw;
+  padding: 0;
+  margin: 1rem auto;
+  height: 250px;
+  }
+}
+
+
+@media (min-width: 1400px) {
+  .container {
+    display: flex;
+    justify-content: space-around;
+    width: 98vw;
+    padding: 0;
+    margin: 1rem auto;
+    height: 350px;
+    }
+
+  .dashLeft {
+    width: 250px;
+    justify-content: center;
+  }
+  .dashList {
+    line-height: 3rem;
+  }
+  .avatarBox {
+    transform: translateX(40px);
+  }
+  .avatarBg {
+    width: 120px;
+    height: 120px;   
+    transform: scale(0.5);    
+  }
+  .avatarBg img {
+    transform: scale(2.8);
+  }
+  .avatarName {
+    font-size: 1.2rem;
+    transform: translateY(-2.7rem);
+    padding-left: 1.9rem;
+  }
+  
+  .avatarStatus {
+    transform: translateY(-4.5rem);
+    font-size: 1rem;
+    color: grey;
+    padding-left: 0.8rem;
+  }
+
 }

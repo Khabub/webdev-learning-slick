@@ -71,3 +71,72 @@
   padding: 0.1rem 0.2rem;
   margin: 0;
 }
+
+
+@media (min-width: 1200px) {
+  .dashName {
+    position: absolute;
+    font-size: 1.2rem;
+    left: 10px;
+    top: -53px;
+    color: #fff;
+  }
+  
+  .graphName {
+    position: absolute;
+    font-size: 0.7rem;
+    left: 10px;
+    top: -15px;
+    color: #fff;
+  }
+  
+  .typeCharName {
+    position: absolute;
+    font-size: 0.7rem;
+    right: 17px;
+    top: -15px;
+    color: #fff;
+  }
+  
+  .descGraph {
+    position: absolute;
+    font-size: 0.4rem;
+    left: 17px;
+    top: 190px;
+    color: rgb(180, 180, 180);
+  }
+  
+  .btnDayWeekMonth {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-around;
+    align-items: center;
+  }
+  
+  .btnDayWeekMonth button {
+    background-color: transparent;
+    color: white;
+    padding: 0.3rem 0.5rem;
+    margin: 0;
+    border-radius: 5px;
+    border: none;
+    font-size: 1rem;
+  }
+  
+  .dashButtons {
+    position: absolute;
+    right: 52px;
+    top: -47px;
+    width: 130px;
+  }
+  
+  .dashButtons button:hover {
+    background-color: rgb(51, 51, 179);
+    color: #fff;
+    cursor: pointer;
+    border-radius: 5px;
+    border: none;
+    padding: 0.3rem 0.5rem;
+    margin: 0;
+  }
+}

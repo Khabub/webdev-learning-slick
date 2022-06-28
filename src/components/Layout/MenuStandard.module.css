@@ -26,6 +26,7 @@
   text-decoration: none;
   color: rgb(199, 199, 199);
   padding: 0.1rem 0;
+  font-size: 1rem;
 }
 
 .links a:hover,
@@ -52,10 +53,36 @@
 .btn-dashboard button:hover,
 .btn-dashboard button:active {
   background: #4e4b4b;
-  color: rgb(251, 255, 0);
-  font-size: 1rem;
-  padding: 0.3rem 1rem;
-  border-radius: 15px;
+  color: rgb(251, 255, 0); 
   cursor: pointer;
   border: 1px solid black;
+  padding: 0.3rem 1rem;
+}
+
+@media (min-width: 1200px) {
+  .links a {
+    font-size: 1.8rem;
+  }
+
+  .btn-dashboard button {
+    font-size: 1.8rem;
+  }
+  .logo {
+    margin-left: 2rem;
+    font-size: 1.2rem;
+  }
+  .btn-dashboard {
+    margin-right: 2rem;
+  }
+}
+
+@media (min-width: 1400px) {
+  .logo {
+    margin-left: 3rem;
+    font-size: 1.4rem;
+  }
+  .btn-dashboard {
+    margin-right: 3rem;
+  }
+
 }

@@ -37,40 +37,72 @@ const linksDayWeekMonth = [
 const DashboardPage = () => {
   const [graphWidth, setGraphWidth] = useState("nothing");
   const [data, setData] = useState(linksDayWeekMonth[0].data);
+  const [graphHeight, setGraphHeight] = useState("nothing");
+  const [legend, setLegend] = useState(118);
 
   const handleWindowSize = useCallback(() => {
-    if (window.innerWidth >= 1000) {
+    if (window.innerWidth >= 1400) {
+      setGraphWidth(1150);
+      setGraphHeight(280);
+      setLegend(270);
+    } else if (window.innerWidth >= 1200) {
+      setGraphWidth(1050);
+      setGraphHeight(200);
+      setLegend(190);
+    } else if (window.innerWidth >= 1000) {
       setGraphWidth(750);
+      setGraphHeight(130);
     } else if (window.innerWidth >= 700) {
       setGraphWidth(550);
+      setGraphHeight(130);
     } else if (window.innerWidth >= 600) {
       setGraphWidth(470);
+      setGraphHeight(130);
     } else if (window.innerWidth >= 500) {
       setGraphWidth(390);
+      setGraphHeight(130);
     } else if (window.innerWidth >= 395) {
       setGraphWidth(290);
+      setGraphHeight(130);
     } else if (window.innerWidth >= 345) {
       setGraphWidth(250);
+      setGraphHeight(130);
     } else {
       setGraphWidth(210);
+      setGraphHeight(130);
     }
   }, []);
 
   useEffect(() => {
-    if (window.innerWidth >= 1000) {
+    if (window.innerWidth >= 1400) {
+      setGraphWidth(1150);
+      setGraphHeight(280);
+      setLegend(270);
+    } else if (window.innerWidth >= 1200) {
+      setGraphWidth(1050);
+      setGraphHeight(200);
+      setLegend(190);
+    } else if (window.innerWidth >= 1000) {
       setGraphWidth(750);
+      setGraphHeight(200);
     } else if (window.innerWidth >= 700) {
       setGraphWidth(550);
+      setGraphHeight(130);
     } else if (window.innerWidth >= 600) {
       setGraphWidth(470);
+      setGraphHeight(130);
     } else if (window.innerWidth >= 500) {
       setGraphWidth(390);
+      setGraphHeight(130);
     } else if (window.innerWidth >= 395) {
       setGraphWidth(290);
+      setGraphHeight(130);
     } else if (window.innerWidth >= 345) {
       setGraphWidth(250);
+      setGraphHeight(130);
     } else {
       setGraphWidth(210);
+      setGraphHeight(130);
     }
 
     window.addEventListener("resize", handleWindowSize);
@@ -107,7 +139,7 @@ const DashboardPage = () => {
       <div className={classes.dashboard}>
         <AreaChart
           width={graphWidth}
-          height={130}
+          height={graphHeight}
           data={data}
           margin={{ top: 10, left: 10, bottom: 10, right: 10 }}
         >
@@ -137,7 +169,7 @@ const DashboardPage = () => {
           <Legend
             layout="horizontal"
             align="right"
-            wrapperStyle={{ top: 118, fontSize: 6 }}
+            wrapperStyle={{ top: legend, fontSize: 6 }}
             iconType="square"
             iconSize={8}
           />
