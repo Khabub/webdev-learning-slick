@@ -7,11 +7,11 @@ const Navigation = (props) => {
   const [icon, setIcon] = useState("noshow");
 
   const handleWindowSize = useCallback(() => {
-    window.innerWidth > 700 ? setIcon(false) : setIcon(true);
+    window.innerWidth >= 700 ? setIcon(false) : setIcon(true);
   }, []);
 
   useEffect(() => {
-    if (window.innerWidth > 700) {
+    if (window.innerWidth >= 700) {
       setIcon(false);
     } else {
       setIcon(true);

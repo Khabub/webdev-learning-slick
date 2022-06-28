@@ -1,8 +1,11 @@
 import React from "react";
 import classes from "./MenuStandard.module.css";
-import { Link } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 
 const Navigation = () => {
+  const isActiveClass = ({ isActive }) =>
+    isActive ? `${classes.active}` : undefined;
+
   return (
     <div className={classes.container}>
       <div className={classes.logo}>
@@ -13,16 +16,16 @@ const Navigation = () => {
 
       <ul className={classes.links}>
         <li>
-          <a href="#t">Products</a>
+          <NavLink to="products" className={isActiveClass}>Products</NavLink>
         </li>
         <li>
-          <a href="#t">About</a>
+          <NavLink to="about" className={isActiveClass}>About</NavLink>
         </li>
         <li>
-          <a href="#t">Resources</a>
+          <NavLink to="resources" className={isActiveClass}>Resources</NavLink>
         </li>
         <li>
-          <a href="#t">Contact</a>
+          <NavLink to="contact" className={isActiveClass}>Contact</NavLink>
         </li>
       </ul>
 

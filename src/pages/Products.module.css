@@ -4,16 +4,12 @@
 
 .bestway {
   color: #fff;
-  margin: 2rem 0 0 0;
+  
   font-size: 2rem;
 }
 
 .trackyour {
-  background: -webkit-linear-gradient(
-    180deg,
-    #9a9ac0 0%,
-    #4e63dd 100%
-  );
+  background: -webkit-linear-gradient(180deg, #9a9ac0 0%, #4e63dd 100%);
   background-clip: text;
   -webkit-text-fill-color: transparent;
   padding: 0;
@@ -30,8 +26,43 @@
 .btn-trythisapp {
   background-color: #0000ff;
   border-radius: 15px;
-  border-style: none;
+  border: 0.2rem solid transparent;
   color: #fff;
   font-size: 1rem;
-  padding: 0.8rem 2.2rem; 
+  padding: 0.8rem 2.2rem;
+  margin-bottom: 0.5rem;
+}
+
+.btn-trythisapp:hover,
+.btn-trythisapp:active {
+  cursor: pointer;
+  background-color: #0000ff;
+  border-radius: 15px;
+  border-style: none;
+  border: 0.2rem solid rgb(158, 193, 202);
+  color: rgb(245, 241, 14);
+  font-size: 1rem;
+  padding: 0.8rem 2.2rem;
+}
+
+@media (min-width: 700px) {
+  .bestway {
+    font-size: 1.7rem;
+    
+  }
+  .trackyour {
+    font-size: 1.7rem;
+  }
+  .homeparagraf {
+    padding: 0.5rem 2rem;
+  }
+  .btn-trythisapp {
+    padding: 0.5rem 1.5rem;
+    margin-bottom: 0.5rem;
+  }
+
+  .btn-trythisapp:hover,
+  .btn-trythisapp:active {        
+    padding: 0.5rem 1.5rem;
+  }
 }
