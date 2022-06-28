@@ -41,9 +41,15 @@ const DashboardPage = () => {
   
 
   const handleWindowSize = useCallback(() => {
-    if (window.innerWidth > 395) {
+    if (window.innerWidth >= 700) {
+      setGraphWidth(550);
+    } else if (window.innerWidth >= 600) {
+      setGraphWidth(470); 
+    } else if (window.innerWidth >= 500) {
+      setGraphWidth(390);         
+    } else if (window.innerWidth >= 395) {
       setGraphWidth(290);
-    } else if (window.innerWidth > 345) {
+    } else if (window.innerWidth >= 345) {
       setGraphWidth(250);
     } else {
       setGraphWidth(210);
@@ -51,9 +57,15 @@ const DashboardPage = () => {
   }, []);
 
   useEffect(() => {
-    if (window.innerWidth > 395) {
+    if (window.innerWidth >= 700) {
+      setGraphWidth(550);
+    } else if (window.innerWidth >= 600) {
+      setGraphWidth(470); 
+    } else if (window.innerWidth >= 500) {
+      setGraphWidth(390);      
+    } else if (window.innerWidth >= 395) {
       setGraphWidth(290);
-    } else if (window.innerWidth > 345) {
+    } else if (window.innerWidth >= 345) {
       setGraphWidth(250);
     } else {
       setGraphWidth(210);

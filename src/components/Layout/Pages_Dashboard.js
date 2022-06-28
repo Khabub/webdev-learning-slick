@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import DashboardPage from "../../pages_dashboard/Dashboard_page";
-import avatar from "../../assets/avatar.png";
+import avatar from "../../assets/administrator-32.png";
 import classes from "./Pages_Dashboard.module.css";
 import DashboardHomescreen from "../../pages_dashboard/Dashboard_homescreen";
 import DashboardSettings from "../../pages_dashboard/Dashboard_settings";
@@ -51,11 +51,12 @@ const PagesDashboard = () => {
   );
 
   return (
+    
     <div className={classes.container}>
       <div className={classes.dashLeft}>
         <div className={classes.avatarBox}>
           <div className={classes.avatarBg}>
-            <img className={classes.avatarImg} src={avatar} alt="avatar"></img>
+            <img src={avatar} alt="avatar"></img>
           </div>
           <p className={classes.avatarName}>Kabub</p>
           <p className={classes.avatarStatus}>PRO Account</p>
@@ -65,6 +66,7 @@ const PagesDashboard = () => {
 
       <div className={classes.dashRight}>{page}</div>
     </div>
+    
   );
 };
 
