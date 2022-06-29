@@ -1,6 +1,10 @@
 .container {
   width: 100vw;
-  height: 200px; 
+  height: 200px;
 }
 
-
+@media (min-width: 900px) {
+  .container {
+    height: 50vh;
+  }
+}
