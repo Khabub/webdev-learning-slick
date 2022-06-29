@@ -1,5 +1,5 @@
 import "./App.css";
-import { Fragment, useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import Navigation from "./components/Layout/Navigation";
 import Pages from "./components/Layout/Pages";
 import MenuHam from "./components/Layout/MenuHam";
@@ -26,12 +26,12 @@ function App() {
   };
 
   return (
-    <Fragment>
+    <div className="mainContainer">
       {toggleMenu && <MenuHam onClose={closeMenu} />}
       <Navigation onShow={hamMenu} />
       <Pages />
       <PagesDashboard />
-    </Fragment>
+    </div>
   );
 }
 

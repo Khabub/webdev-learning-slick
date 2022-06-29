@@ -1,8 +1,7 @@
 body {
   margin: 0;
   padding: 0;
-  width: 100vw;
-  height: 100vh;
+  
   overflow-x: hidden;
 
   background: radial-gradient(
@@ -26,4 +25,11 @@ body {
   100% {
     background-position: 0% 50%;
   }
+}
+
+.mainContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100vh;
 }
